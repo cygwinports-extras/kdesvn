@@ -1,0 +1,369 @@
+kdesvn
+------------------------------------------
+KDESvn is a frontend to the subversion vcs. In difference to most other 
+tools it uses the subversion C-Api direct via a c++ wrapper made by 
+Rapid SVN and doesn't parse the output of the subversion client. So it 
+is a real client itself instead of a frontend to the command line tool. 
+The origin wrapper is meanwhile ported to Qt-toolkit and may used in 
+other projects wanting a pure qt-wrapper.
+
+Runtime requirements:
+  cygwin-1.5.25-15
+  kdelibs4-3.5.9-1
+  libapr1-1.3.2-1
+  libaprutil1-1.3.2-1
+  libsqlite3_0-3.5.9-1
+  libX11_6-1.1.3-1
+  qt3-3.3.8-4
+  subversion-1.4.6-3
+
+Build requirements:
+(besides corresponding -devel packages)
+  autoconf2.5-2.61-1
+  automake1.10-1.10.1-1
+  binutils-20080523-2
+  cmake-2.4.8-3
+  cygport-0.3.13-1
+  gawk-3.1.6-1
+  gcc-core-3.4.4-3
+  gcc-g++-3.4.4-3
+  make-3.81-1
+  perl-5.10.0-5
+  sed-4.1.5-2
+
+Canonical website:
+  http://kdesvn.alwins-world.de/trac.fcgi/wiki
+
+Canonical download:
+  http://kdesvn.alwins-world.de/trac.fcgi/wiki/DownLoads
+
+-------------------------------------------
+
+Build instructions:
+  unpack kdesvn-1.0.0-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./kdesvn-1.0.0-X.cygport all
+
+This will create:
+  /usr/src/kdesvn-1.0.0-X-src.tar.bz2
+  /usr/src/kdesvn-1.0.0-X.tar.bz2
+  /usr/src/libsvnqt-devel-1.0.0-X.tar.bz2
+  /usr/src/libsvnqt4-1.0.0-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary packages:
+
+  /etc/postinstall/kdesvn.sh
+  /usr/bin/kdesvn.exe
+  /usr/bin/kdesvnaskpass.exe
+  /usr/lib/kde3/cygkdesvnpart.dll
+  /usr/lib/kde3/kded_kdesvnd.dll
+  /usr/lib/kde3/kded_kdesvnd.la
+  /usr/lib/kde3/kio_ksvn.dll
+  /usr/lib/kde3/kio_ksvn.la
+  /usr/lib/kde3/libkdesvnpart.la
+  /usr/share/applications/kde/kdesvn.desktop
+  /usr/share/apps/kconf_update/kdesvn-use-external-update.sh
+  /usr/share/apps/kconf_update/kdesvnpartrc-use-external.upd
+  /usr/share/apps/kdesvn/kdesvnui.rc
+  /usr/share/apps/kdesvnpart/kdesvn_part.rc
+  /usr/share/apps/konqueror/servicemenus/kdesvn_subversion.desktop
+  /usr/share/config.kcfg/kdesvn_part.kcfg
+  /usr/share/doc/HTML/en/kdesvn/common
+  /usr/share/doc/HTML/en/kdesvn/hi128-filesys-kdesvnadded.png
+  /usr/share/doc/HTML/en/kdesvn/hi128-filesys-kdesvnconflicted.png
+  /usr/share/doc/HTML/en/kdesvn/hi128-filesys-kdesvndeleted.png
+  /usr/share/doc/HTML/en/kdesvn/hi128-filesys-kdesvnlocked.png
+  /usr/share/doc/HTML/en/kdesvn/hi128-filesys-kdesvnmodified.png
+  /usr/share/doc/HTML/en/kdesvn/hi128-filesys-kdesvnneedlock.png
+  /usr/share/doc/HTML/en/kdesvn/hi128-filesys-kdesvnupdates.png
+  /usr/share/doc/HTML/en/kdesvn/index.cache.bz2
+  /usr/share/doc/HTML/en/kdesvn/index.docbook
+  /usr/share/doc/HTML/nl/kdesvn/hi128-filesys-kdesvnadded.png
+  /usr/share/doc/HTML/nl/kdesvn/hi128-filesys-kdesvnconflicted.png
+  /usr/share/doc/HTML/nl/kdesvn/hi128-filesys-kdesvndeleted.png
+  /usr/share/doc/HTML/nl/kdesvn/hi128-filesys-kdesvnlocked.png
+  /usr/share/doc/HTML/nl/kdesvn/hi128-filesys-kdesvnmodified.png
+  /usr/share/doc/HTML/nl/kdesvn/hi128-filesys-kdesvnneedlock.png
+  /usr/share/doc/HTML/nl/kdesvn/hi128-filesys-kdesvnupdates.png
+  /usr/share/doc/HTML/nl/kdesvn/index.cache.bz2
+  /usr/share/doc/HTML/nl/kdesvn/index.docbook
+  /usr/share/doc/kdesvn-1.0.0/AUTHORS
+  /usr/share/doc/kdesvn-1.0.0/COPYING
+  /usr/share/doc/kdesvn-1.0.0/ChangeLog
+  /usr/share/doc/kdesvn-1.0.0/GPL.txt
+  /usr/share/doc/kdesvn-1.0.0/README
+  /usr/share/doc/kdesvn-1.0.0/TODO
+  /usr/share/icons/hicolor/128x128/actions/kdesvnadd.png
+  /usr/share/icons/hicolor/128x128/actions/kdesvnaddrecursive.png
+  /usr/share/icons/hicolor/128x128/actions/kdesvnblame.png
+  /usr/share/icons/hicolor/128x128/actions/kdesvncat.png
+  /usr/share/icons/hicolor/128x128/actions/kdesvncheckout.png
+  /usr/share/icons/hicolor/128x128/actions/kdesvncheckupdates.png
+  /usr/share/icons/hicolor/128x128/actions/kdesvncleanup.png
+  /usr/share/icons/hicolor/128x128/actions/kdesvncommit.png
+  /usr/share/icons/hicolor/128x128/actions/kdesvncopy.png
+  /usr/share/icons/hicolor/128x128/actions/kdesvndelete.png
+  /usr/share/icons/hicolor/128x128/actions/kdesvndiff.png
+  /usr/share/icons/hicolor/128x128/actions/kdesvnexport.png
+  /usr/share/icons/hicolor/128x128/actions/kdesvninfo.png
+  /usr/share/icons/hicolor/128x128/actions/kdesvnlock.png
+  /usr/share/icons/hicolor/128x128/actions/kdesvnlog.png
+  /usr/share/icons/hicolor/128x128/actions/kdesvnmerge.png
+  /usr/share/icons/hicolor/128x128/actions/kdesvnrelocate.png
+  /usr/share/icons/hicolor/128x128/actions/kdesvnswitch.png
+  /usr/share/icons/hicolor/128x128/actions/kdesvnunlock.png
+  /usr/share/icons/hicolor/128x128/actions/kdesvnupdate.png
+  /usr/share/icons/hicolor/128x128/apps/kdesvn.png
+  /usr/share/icons/hicolor/128x128/filesystems/kdesvnadded.png
+  /usr/share/icons/hicolor/128x128/filesystems/kdesvnconflicted.png
+  /usr/share/icons/hicolor/128x128/filesystems/kdesvndeleted.png
+  /usr/share/icons/hicolor/128x128/filesystems/kdesvnlocked.png
+  /usr/share/icons/hicolor/128x128/filesystems/kdesvnmodified.png
+  /usr/share/icons/hicolor/128x128/filesystems/kdesvnneedlock.png
+  /usr/share/icons/hicolor/128x128/filesystems/kdesvnupdates.png
+  /usr/share/icons/hicolor/16x16/actions/kdesvnadd.png
+  /usr/share/icons/hicolor/16x16/actions/kdesvnaddrecursive.png
+  /usr/share/icons/hicolor/16x16/actions/kdesvnblame.png
+  /usr/share/icons/hicolor/16x16/actions/kdesvncat.png
+  /usr/share/icons/hicolor/16x16/actions/kdesvncheckout.png
+  /usr/share/icons/hicolor/16x16/actions/kdesvncheckupdates.png
+  /usr/share/icons/hicolor/16x16/actions/kdesvncleanup.png
+  /usr/share/icons/hicolor/16x16/actions/kdesvncommit.png
+  /usr/share/icons/hicolor/16x16/actions/kdesvncopy.png
+  /usr/share/icons/hicolor/16x16/actions/kdesvndelete.png
+  /usr/share/icons/hicolor/16x16/actions/kdesvndiff.png
+  /usr/share/icons/hicolor/16x16/actions/kdesvnexport.png
+  /usr/share/icons/hicolor/16x16/actions/kdesvninfo.png
+  /usr/share/icons/hicolor/16x16/actions/kdesvnlock.png
+  /usr/share/icons/hicolor/16x16/actions/kdesvnlog.png
+  /usr/share/icons/hicolor/16x16/actions/kdesvnmerge.png
+  /usr/share/icons/hicolor/16x16/actions/kdesvnrelocate.png
+  /usr/share/icons/hicolor/16x16/actions/kdesvnswitch.png
+  /usr/share/icons/hicolor/16x16/actions/kdesvnunlock.png
+  /usr/share/icons/hicolor/16x16/actions/kdesvnupdate.png
+  /usr/share/icons/hicolor/16x16/apps/kdesvn.png
+  /usr/share/icons/hicolor/16x16/filesystems/kdesvnadded.png
+  /usr/share/icons/hicolor/16x16/filesystems/kdesvnconflicted.png
+  /usr/share/icons/hicolor/16x16/filesystems/kdesvndeleted.png
+  /usr/share/icons/hicolor/16x16/filesystems/kdesvnlocked.png
+  /usr/share/icons/hicolor/16x16/filesystems/kdesvnmodified.png
+  /usr/share/icons/hicolor/16x16/filesystems/kdesvnneedlock.png
+  /usr/share/icons/hicolor/16x16/filesystems/kdesvnupdates.png
+  /usr/share/icons/hicolor/22x22/actions/kdesvnadd.png
+  /usr/share/icons/hicolor/22x22/actions/kdesvnaddrecursive.png
+  /usr/share/icons/hicolor/22x22/actions/kdesvnblame.png
+  /usr/share/icons/hicolor/22x22/actions/kdesvncat.png
+  /usr/share/icons/hicolor/22x22/actions/kdesvncheckout.png
+  /usr/share/icons/hicolor/22x22/actions/kdesvncheckupdates.png
+  /usr/share/icons/hicolor/22x22/actions/kdesvncleanup.png
+  /usr/share/icons/hicolor/22x22/actions/kdesvncommit.png
+  /usr/share/icons/hicolor/22x22/actions/kdesvncopy.png
+  /usr/share/icons/hicolor/22x22/actions/kdesvndelete.png
+  /usr/share/icons/hicolor/22x22/actions/kdesvndiff.png
+  /usr/share/icons/hicolor/22x22/actions/kdesvnexport.png
+  /usr/share/icons/hicolor/22x22/actions/kdesvninfo.png
+  /usr/share/icons/hicolor/22x22/actions/kdesvnlock.png
+  /usr/share/icons/hicolor/22x22/actions/kdesvnlog.png
+  /usr/share/icons/hicolor/22x22/actions/kdesvnmerge.png
+  /usr/share/icons/hicolor/22x22/actions/kdesvnrelocate.png
+  /usr/share/icons/hicolor/22x22/actions/kdesvnswitch.png
+  /usr/share/icons/hicolor/22x22/actions/kdesvnunlock.png
+  /usr/share/icons/hicolor/22x22/actions/kdesvnupdate.png
+  /usr/share/icons/hicolor/22x22/apps/kdesvn.png
+  /usr/share/icons/hicolor/22x22/filesystems/kdesvnadded.png
+  /usr/share/icons/hicolor/22x22/filesystems/kdesvnconflicted.png
+  /usr/share/icons/hicolor/22x22/filesystems/kdesvndeleted.png
+  /usr/share/icons/hicolor/22x22/filesystems/kdesvnlocked.png
+  /usr/share/icons/hicolor/22x22/filesystems/kdesvnmodified.png
+  /usr/share/icons/hicolor/22x22/filesystems/kdesvnneedlock.png
+  /usr/share/icons/hicolor/22x22/filesystems/kdesvnupdates.png
+  /usr/share/icons/hicolor/32x32/actions/kdesvnadd.png
+  /usr/share/icons/hicolor/32x32/actions/kdesvnaddrecursive.png
+  /usr/share/icons/hicolor/32x32/actions/kdesvnblame.png
+  /usr/share/icons/hicolor/32x32/actions/kdesvncat.png
+  /usr/share/icons/hicolor/32x32/actions/kdesvncheckout.png
+  /usr/share/icons/hicolor/32x32/actions/kdesvncheckupdates.png
+  /usr/share/icons/hicolor/32x32/actions/kdesvncleanup.png
+  /usr/share/icons/hicolor/32x32/actions/kdesvncommit.png
+  /usr/share/icons/hicolor/32x32/actions/kdesvncopy.png
+  /usr/share/icons/hicolor/32x32/actions/kdesvndelete.png
+  /usr/share/icons/hicolor/32x32/actions/kdesvndiff.png
+  /usr/share/icons/hicolor/32x32/actions/kdesvnexport.png
+  /usr/share/icons/hicolor/32x32/actions/kdesvninfo.png
+  /usr/share/icons/hicolor/32x32/actions/kdesvnlock.png
+  /usr/share/icons/hicolor/32x32/actions/kdesvnlog.png
+  /usr/share/icons/hicolor/32x32/actions/kdesvnmerge.png
+  /usr/share/icons/hicolor/32x32/actions/kdesvnrelocate.png
+  /usr/share/icons/hicolor/32x32/actions/kdesvnswitch.png
+  /usr/share/icons/hicolor/32x32/actions/kdesvnunlock.png
+  /usr/share/icons/hicolor/32x32/actions/kdesvnupdate.png
+  /usr/share/icons/hicolor/32x32/apps/kdesvn.png
+  /usr/share/icons/hicolor/32x32/filesystems/kdesvnadded.png
+  /usr/share/icons/hicolor/32x32/filesystems/kdesvnconflicted.png
+  /usr/share/icons/hicolor/32x32/filesystems/kdesvndeleted.png
+  /usr/share/icons/hicolor/32x32/filesystems/kdesvnlocked.png
+  /usr/share/icons/hicolor/32x32/filesystems/kdesvnmodified.png
+  /usr/share/icons/hicolor/32x32/filesystems/kdesvnneedlock.png
+  /usr/share/icons/hicolor/32x32/filesystems/kdesvnupdates.png
+  /usr/share/icons/hicolor/48x48/actions/kdesvnadd.png
+  /usr/share/icons/hicolor/48x48/actions/kdesvnaddrecursive.png
+  /usr/share/icons/hicolor/48x48/actions/kdesvnblame.png
+  /usr/share/icons/hicolor/48x48/actions/kdesvncat.png
+  /usr/share/icons/hicolor/48x48/actions/kdesvncheckout.png
+  /usr/share/icons/hicolor/48x48/actions/kdesvncheckupdates.png
+  /usr/share/icons/hicolor/48x48/actions/kdesvncleanup.png
+  /usr/share/icons/hicolor/48x48/actions/kdesvncommit.png
+  /usr/share/icons/hicolor/48x48/actions/kdesvncopy.png
+  /usr/share/icons/hicolor/48x48/actions/kdesvndelete.png
+  /usr/share/icons/hicolor/48x48/actions/kdesvndiff.png
+  /usr/share/icons/hicolor/48x48/actions/kdesvnexport.png
+  /usr/share/icons/hicolor/48x48/actions/kdesvninfo.png
+  /usr/share/icons/hicolor/48x48/actions/kdesvnlock.png
+  /usr/share/icons/hicolor/48x48/actions/kdesvnlog.png
+  /usr/share/icons/hicolor/48x48/actions/kdesvnmerge.png
+  /usr/share/icons/hicolor/48x48/actions/kdesvnrelocate.png
+  /usr/share/icons/hicolor/48x48/actions/kdesvnswitch.png
+  /usr/share/icons/hicolor/48x48/actions/kdesvnunlock.png
+  /usr/share/icons/hicolor/48x48/actions/kdesvnupdate.png
+  /usr/share/icons/hicolor/48x48/apps/kdesvn.png
+  /usr/share/icons/hicolor/48x48/filesystems/kdesvnadded.png
+  /usr/share/icons/hicolor/48x48/filesystems/kdesvnconflicted.png
+  /usr/share/icons/hicolor/48x48/filesystems/kdesvndeleted.png
+  /usr/share/icons/hicolor/48x48/filesystems/kdesvnlocked.png
+  /usr/share/icons/hicolor/48x48/filesystems/kdesvnmodified.png
+  /usr/share/icons/hicolor/48x48/filesystems/kdesvnneedlock.png
+  /usr/share/icons/hicolor/48x48/filesystems/kdesvnupdates.png
+  /usr/share/icons/hicolor/64x64/actions/kdesvnadd.png
+  /usr/share/icons/hicolor/64x64/actions/kdesvnaddrecursive.png
+  /usr/share/icons/hicolor/64x64/actions/kdesvnblame.png
+  /usr/share/icons/hicolor/64x64/actions/kdesvncat.png
+  /usr/share/icons/hicolor/64x64/actions/kdesvncheckout.png
+  /usr/share/icons/hicolor/64x64/actions/kdesvncheckupdates.png
+  /usr/share/icons/hicolor/64x64/actions/kdesvncleanup.png
+  /usr/share/icons/hicolor/64x64/actions/kdesvncommit.png
+  /usr/share/icons/hicolor/64x64/actions/kdesvncopy.png
+  /usr/share/icons/hicolor/64x64/actions/kdesvndelete.png
+  /usr/share/icons/hicolor/64x64/actions/kdesvndiff.png
+  /usr/share/icons/hicolor/64x64/actions/kdesvnexport.png
+  /usr/share/icons/hicolor/64x64/actions/kdesvninfo.png
+  /usr/share/icons/hicolor/64x64/actions/kdesvnlock.png
+  /usr/share/icons/hicolor/64x64/actions/kdesvnlog.png
+  /usr/share/icons/hicolor/64x64/actions/kdesvnmerge.png
+  /usr/share/icons/hicolor/64x64/actions/kdesvnrelocate.png
+  /usr/share/icons/hicolor/64x64/actions/kdesvnswitch.png
+  /usr/share/icons/hicolor/64x64/actions/kdesvnunlock.png
+  /usr/share/icons/hicolor/64x64/actions/kdesvnupdate.png
+  /usr/share/icons/hicolor/64x64/apps/kdesvn.png
+  /usr/share/icons/hicolor/64x64/filesystems/kdesvnadded.png
+  /usr/share/icons/hicolor/64x64/filesystems/kdesvnconflicted.png
+  /usr/share/icons/hicolor/64x64/filesystems/kdesvndeleted.png
+  /usr/share/icons/hicolor/64x64/filesystems/kdesvnlocked.png
+  /usr/share/icons/hicolor/64x64/filesystems/kdesvnmodified.png
+  /usr/share/icons/hicolor/64x64/filesystems/kdesvnneedlock.png
+  /usr/share/icons/hicolor/64x64/filesystems/kdesvnupdates.png
+  /usr/share/icons/hicolor/scalable/actions/kdesvnadd.svgz
+  /usr/share/icons/hicolor/scalable/actions/kdesvnaddrecursive.svgz
+  /usr/share/icons/hicolor/scalable/actions/kdesvnblame.svgz
+  /usr/share/icons/hicolor/scalable/actions/kdesvncat.svgz
+  /usr/share/icons/hicolor/scalable/actions/kdesvncheckout.svgz
+  /usr/share/icons/hicolor/scalable/actions/kdesvncheckupdates.svgz
+  /usr/share/icons/hicolor/scalable/actions/kdesvncleanup.svgz
+  /usr/share/icons/hicolor/scalable/actions/kdesvncommit.svgz
+  /usr/share/icons/hicolor/scalable/actions/kdesvncopy.svgz
+  /usr/share/icons/hicolor/scalable/actions/kdesvndelete.svgz
+  /usr/share/icons/hicolor/scalable/actions/kdesvndiff.svgz
+  /usr/share/icons/hicolor/scalable/actions/kdesvnexport.svgz
+  /usr/share/icons/hicolor/scalable/actions/kdesvninfo.svgz
+  /usr/share/icons/hicolor/scalable/actions/kdesvnlock.svgz
+  /usr/share/icons/hicolor/scalable/actions/kdesvnlog.svgz
+  /usr/share/icons/hicolor/scalable/actions/kdesvnmerge.svgz
+  /usr/share/icons/hicolor/scalable/actions/kdesvnrelocate.svgz
+  /usr/share/icons/hicolor/scalable/actions/kdesvnswitch.svgz
+  /usr/share/icons/hicolor/scalable/actions/kdesvnunlock.svgz
+  /usr/share/icons/hicolor/scalable/actions/kdesvnupdate.svgz
+  /usr/share/icons/hicolor/scalable/apps/kdesvn.svgz
+  /usr/share/icons/hicolor/scalable/filesystems/kdesvnadded.svgz
+  /usr/share/icons/hicolor/scalable/filesystems/kdesvnconflicted.svgz
+  /usr/share/icons/hicolor/scalable/filesystems/kdesvndeleted.svgz
+  /usr/share/icons/hicolor/scalable/filesystems/kdesvnlocked.svgz
+  /usr/share/icons/hicolor/scalable/filesystems/kdesvnmodified.svgz
+  /usr/share/icons/hicolor/scalable/filesystems/kdesvnneedlock.svgz
+  /usr/share/icons/hicolor/scalable/filesystems/kdesvnupdates.svgz
+  /usr/share/locale/ca/LC_MESSAGES/kdesvn.mo
+  /usr/share/locale/cs/LC_MESSAGES/kdesvn.mo
+  /usr/share/locale/de/LC_MESSAGES/kdesvn.mo
+  /usr/share/locale/es/LC_MESSAGES/kdesvn.mo
+  /usr/share/locale/fr/LC_MESSAGES/kdesvn.mo
+  /usr/share/locale/gl/LC_MESSAGES/kdesvn.mo
+  /usr/share/locale/it/LC_MESSAGES/kdesvn.mo
+  /usr/share/locale/lt/LC_MESSAGES/kdesvn.mo
+  /usr/share/locale/nl/LC_MESSAGES/kdesvn.mo
+  /usr/share/locale/pa/LC_MESSAGES/kdesvn.mo
+  /usr/share/locale/ru/LC_MESSAGES/kdesvn.mo
+  /usr/share/locale/sv/LC_MESSAGES/kdesvn.mo
+  /usr/share/man/man1/kdesvn.1.gz
+  /usr/share/man/man1/kdesvnaskpass.1.gz
+  /usr/share/services/kded/kdesvnd.desktop
+  /usr/share/services/ksvn+file.protocol
+  /usr/share/services/ksvn+http.protocol
+  /usr/share/services/ksvn+https.protocol
+  /usr/share/services/ksvn+ssh.protocol
+  /usr/share/services/ksvn.protocol
+
+(libsvnqt4)
+  /usr/bin/cygsvnqt-4.dll
+
+(libsvnqt-devel)
+  /usr/include/svnqt/annotate_line.hpp
+  /usr/include/svnqt/apr.hpp
+  /usr/include/svnqt/cache/DatabaseException.hpp
+  /usr/include/svnqt/cache/LogCache.hpp
+  /usr/include/svnqt/cache/ReposLog.hpp
+  /usr/include/svnqt/check.hpp
+  /usr/include/svnqt/client.hpp
+  /usr/include/svnqt/commititem.hpp
+  /usr/include/svnqt/conflictdescription.hpp
+  /usr/include/svnqt/conflictresult.hpp
+  /usr/include/svnqt/context.hpp
+  /usr/include/svnqt/context_listener.hpp
+  /usr/include/svnqt/datetime.hpp
+  /usr/include/svnqt/diffoptions.hpp
+  /usr/include/svnqt/dirent.hpp
+  /usr/include/svnqt/entry.hpp
+  /usr/include/svnqt/exception.hpp
+  /usr/include/svnqt/info_entry.hpp
+  /usr/include/svnqt/lock_entry.hpp
+  /usr/include/svnqt/log_entry.hpp
+  /usr/include/svnqt/path.hpp
+  /usr/include/svnqt/pool.hpp
+  /usr/include/svnqt/repository.hpp
+  /usr/include/svnqt/repositorylistener.hpp
+  /usr/include/svnqt/revision.hpp
+  /usr/include/svnqt/shared_pointer.hpp
+  /usr/include/svnqt/smart_pointer.hpp
+  /usr/include/svnqt/status.hpp
+  /usr/include/svnqt/stringarray.hpp
+  /usr/include/svnqt/svnfilestream.hpp
+  /usr/include/svnqt/svnqt_defines.hpp
+  /usr/include/svnqt/svnqttypes.hpp
+  /usr/include/svnqt/svnstream.hpp
+  /usr/include/svnqt/targets.hpp
+  /usr/include/svnqt/url.hpp
+  /usr/include/svnqt/version_check.hpp
+  /usr/include/svnqt/wc.hpp
+  /usr/lib/libsvnqt.dll.a
+
+------------------
+
+Port Notes:
+
+----- version 1.0.0-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/

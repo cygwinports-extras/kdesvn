@@ -1,0 +1,11 @@
+--- origsrc/kdesvn-1.0.0/src/kiosvn/CMakeLists.txt	2008-07-13 14:23:03.000000000 -0500
++++ src/kdesvn-1.0.0/src/kiosvn/CMakeLists.txt	2008-08-07 18:55:31.046875000 -0500
+@@ -20,7 +20,7 @@
+ INSTALL(TARGETS kio_ksvn
+     LIBRARY DESTINATION ${PLUGIN_INSTALL_DIR})
+ 
+-FILE(GLOB PROTFILES *.protocol)
++FILE(GLOB PROTFILES ksvn*.protocol)
+ 
+ INSTALL(FILES ${PROTFILES}
+     DESTINATION ${SERVICES_INSTALL_DIR})
