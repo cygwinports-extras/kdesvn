@@ -4,9 +4,9 @@ DESCRIPTION="KDE Subversion client"
 HOMEPAGE="http://kdesvn.alwins-world.de/"
 SRC_URI="http://kdesvn.alwins-world.de/trac.fcgi/downloads/${P}.tar.bz2"
 PATCH_URI="
-	http://kdesvn.alwins-world.de/trac.fcgi/downloads/imageinstallfix.patch.gz
 	1.0.0-collision-kdesdk.patch
 	1.0.0-fix-lib.patch
+	1.0.2-as-needed.patch
 "
 
 abi=4
