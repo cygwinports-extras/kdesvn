@@ -9,12 +9,10 @@ PATCH_URI="
 	1.0.2-as-needed.patch
 "
 
-abi=4
-PKG_NAMES="${PN} libsvnqt${abi} libsvnqt-devel"
-PKG_HINTS="bin lib devel"
-PKG_CONTENTS[0]="etc/ usr/bin/*.exe usr/lib/kde3/ usr/share/"
-PKG_CONTENTS[1]="usr/bin/*-${abi}.dll"
-PKG_CONTENTS[2]="usr/include/ usr/lib/lib*"
+PKG_NAMES="${PN} libsvnqt4 libsvnqt-devel"
+kdesvn_CONTENTS="etc/ usr/bin/*.exe usr/lib/kde3/ usr/share/"
+libsvnqt4_CONTENTS="usr/bin/cygsvnqt-4.dll"
+libsvnqt_devel_CONTENTS="usr/include/ usr/lib/lib*"
 
 DISTCLEANFILES="cmakemodules/KDE3Macros.cmake"
 CXXFLAGS+=" -DQT_THREAD_SUPPORT"
