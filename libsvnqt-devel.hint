@@ -1,5 +1,5 @@
 category: Devel KDE
-requires: cygwin libapr1-devel libaprutil1-devel libsvnqt4 qt3-devel subversion-devel
+requires: libapr1-devel libaprutil1-devel libsvnqt4 qt3-devel subversion-devel
 external-source: kdesvn
 sdesc: "Qt3 Subversion libraries binding (devel)"
 ldesc: "KDESvn is a frontend to the subversion vcs. In difference to 
