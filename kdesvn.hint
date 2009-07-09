@@ -1,5 +1,5 @@
 category: Devel KDE
-requires: kdelibs4 libsvnqt4 libX11_6 qt3 subversion
+requires: libapr1 libgcc1 libkdecore5 libQtCore4 libQtDBus4 libQtGui4 libQtXml4 libstdc++6 libsvnqt5 subversion
 sdesc: "KDE Subversion client"
 ldesc: "KDESvn is a frontend to the subversion vcs. In difference to 
 most other tools it uses the subversion C-Api direct via a c++ wrapper 
