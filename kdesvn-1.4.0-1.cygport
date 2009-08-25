@@ -9,7 +9,7 @@ PATCH_URI="
 	1.3.2-install.patch
 "
 
-PKG_NAMES="${PN} libsvnqt5 libsvnqt-devel"
+PKG_NAMES="${PN} libsvnqt6 libsvnqt-devel"
 kdesvn_CONTENTS="etc/ usr/bin/*.exe usr/lib/kde4/ usr/share/"
-libsvnqt5_CONTENTS="usr/bin/cygsvnqt-5.dll"
+libsvnqt6_CONTENTS="usr/bin/cygsvnqt-6.dll"
 libsvnqt_devel_CONTENTS="usr/include/ usr/lib/lib*"
