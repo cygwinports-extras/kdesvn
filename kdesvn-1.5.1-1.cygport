@@ -13,3 +13,12 @@ PKG_NAMES="${PN} libsvnqt6 libsvnqt-devel"
 kdesvn_CONTENTS="etc/ usr/bin/*.exe usr/lib/kde4/ usr/share/"
 libsvnqt6_CONTENTS="usr/bin/cygsvnqt-6.dll"
 libsvnqt_devel_CONTENTS="usr/include/ usr/lib/lib*"
+
+CYGPORT_USE_UNSTABLE_API=1
+src_unpack_hook() {
+	# shipped as symlinks to src/pics; breaks install step
+	rm -f doc/en/hi128-filesys-*
+	rm -f doc/nl/hi128-filesys-*
+	cp src/pics/hi128-filesys-* doc/en/
+	cp src/pics/hi128-filesys-* doc/nl
+}
