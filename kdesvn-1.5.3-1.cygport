@@ -4,9 +4,7 @@ DESCRIPTION="KDE Subversion client"
 HOMEPAGE="http://kdesvn.alwins-world.de/"
 SRC_URI="http://kdesvn.alwins-world.de/downloads/${P}.tar.bz2"
 PATCH_URI="
-	1.3.2-as-needed.patch
 	1.3.2-collision-kdesdk.patch
-	1.3.2-install.patch
 "
 
 PKG_NAMES="${PN} libsvnqt6 libsvnqt-devel"
