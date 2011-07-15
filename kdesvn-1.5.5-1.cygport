@@ -12,6 +12,8 @@ kdesvn_CONTENTS="etc/ usr/bin/*.exe usr/lib/kde4/ usr/share/"
 libsvnqt6_CONTENTS="usr/bin/cygsvnqt-6.dll"
 libsvnqt_devel_CONTENTS="usr/include/ usr/lib/lib*"
 
+DIFF_EXCLUDES="*.po"
+
 CYGPORT_USE_UNSTABLE_API=1
 src_unpack_hook() {
 	# shipped as symlinks to src/pics; breaks install step
