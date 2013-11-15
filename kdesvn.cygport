@@ -1,0 +1,36 @@
+inherit kde4
+
+NAME="kdesvn"
+VERSION=1.5.5
+RELEASE=1
+CATEGORY="Devel"
+SUMMARY="KDE Subversion client"
+DESCRIPTION="KDESvn is a frontend to the subversion vcs. In difference to most
+other tools it uses the subversion C-Api direct via a c++ wrapper and doesn't
+parse the output of the subversion client. So it is a real client itself
+instead of a frontend to the command line tool."
+HOMEPAGE="http://kdesvn.alwins-world.de/"
+SRC_URI="http://kdesvn.alwins-world.de/downloads/${NAME}-${VERSION}.tar.bz2"
+PATCH_URI="
+	1.3.2-collision-kdesdk.patch
+"
+
+PKG_NAMES="${NAME} libsvnqt6 libsvnqt-devel"
+kdesvn_CONTENTS="etc/ usr/bin/*.exe usr/lib/kde4/ usr/share/"
+libsvnqt6_CATEGORY="Libs"
+libsvnqt6_SUMMARY="Qt interface for Subversion APIs"
+libsvnqt6_CONTENTS="usr/bin/cygsvnqt-6.dll"
+libsvnqt_devel_CATEGORY="Libs"
+libsvnqt_devel_SUMMARY=${libsvnqt6_SUMMARY}
+libsvnqt_devel_CONTENTS="usr/include/ usr/lib/lib*"
+
+DIFF_EXCLUDES="*.po"
+
+CYGPORT_USE_UNSTABLE_API=1
+src_unpack_hook() {
+	# shipped as symlinks to src/pics; breaks install step
+	rm -f doc/en/hi128-filesys-*
+	rm -f doc/nl/hi128-filesys-*
+	cp src/pics/hi128-filesys-* doc/en/
+	cp src/pics/hi128-filesys-* doc/nl
+}
