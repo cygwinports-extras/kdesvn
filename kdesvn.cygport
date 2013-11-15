@@ -1,7 +1,7 @@
 inherit kde4
 
 NAME="kdesvn"
-VERSION=1.5.5
+VERSION=1.6.0
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="KDE Subversion client"
@@ -10,18 +10,22 @@ other tools it uses the subversion C-Api direct via a c++ wrapper and doesn't
 parse the output of the subversion client. So it is a real client itself
 instead of a frontend to the command line tool."
 HOMEPAGE="http://kdesvn.alwins-world.de/"
-SRC_URI="http://kdesvn.alwins-world.de/downloads/${NAME}-${VERSION}.tar.bz2"
+#SRC_URI="http://kdesvn.alwins-world.de/downloads/${NAME}-${VERSION}.tar.bz2"
+md5sum=7e6adc98ff4777a06d5752d3f2b58fa3
+SRC_URI="http://pkgs.fedoraproject.org/repo/pkgs/kdesvn/kdesvn-${VERSION}.tar.bz2/${md5sum}/kdesvn-${VERSION}.tar.bz2"
 PATCH_URI="
 	1.3.2-collision-kdesdk.patch
+	1.6.0-cmake28.patch
 "
 
-PKG_NAMES="${NAME} libsvnqt6 libsvnqt-devel"
+PKG_NAMES="${NAME} libsvnqt7 libsvnqt-devel"
 kdesvn_CONTENTS="etc/ usr/bin/*.exe usr/lib/kde4/ usr/share/"
-libsvnqt6_CATEGORY="Libs"
-libsvnqt6_SUMMARY="Qt interface for Subversion APIs"
-libsvnqt6_CONTENTS="usr/bin/cygsvnqt-6.dll"
+libsvnqt7_CATEGORY="Libs"
+libsvnqt7_SUMMARY="Qt interface for Subversion APIs"
+libsvnqt7_CONTENTS="usr/bin/cygsvnqt-7.dll"
 libsvnqt_devel_CATEGORY="Libs"
-libsvnqt_devel_SUMMARY=${libsvnqt6_SUMMARY}
+libsvnqt_devel_SUMMARY=${libsvnqt7_SUMMARY}
+libsvnqt_devel_REQUIRES="libapr1-devel libQtCore4-devel libQtSql4-devel subversion-devel"
 libsvnqt_devel_CONTENTS="usr/include/ usr/lib/lib*"
 
 DIFF_EXCLUDES="*.po"
