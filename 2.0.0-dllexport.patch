@@ -1,0 +1,15 @@
+--- origsrc/kdesvn-2.0.0/src/svnqt/svnqt_defines.h.in	2016-12-04 09:48:29.657939900 -0600
++++ src/kdesvn-2.0.0/src/svnqt/svnqt_defines.h.in	2017-02-16 22:00:08.053752300 -0600
+@@ -23,11 +23,7 @@
+ 
+ #include <QtCore/qglobal.h>
+ 
+-#ifdef svnqt_EXPORTS
+-  #define SVNQT_EXPORT Q_DECL_EXPORT
+-#else
+-  #define SVNQT_EXPORT Q_DECL_IMPORT
+-#endif
++#define SVNQT_EXPORT
+ #define SVNQT_NOEXPORT Q_DECL_HIDDEN
+ 
+ #cmakedefine HAS_BACKTRACE_H 1
